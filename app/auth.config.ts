@@ -14,6 +14,13 @@ export const {
     GoogleProvider({
       clientId: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
+      redirectProxyUrl: "https://google-oauth-fawn.vercel.app/api/auth",
+      authorization: {
+        params: {
+          callbackUrl:
+            "https://google-oauth-fawn.vercel.app/api/auth/callback/google",
+        },
+      },
     }),
   ],
 });
